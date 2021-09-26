@@ -1,0 +1,13 @@
+Package: lbtemp
+Title: My Personal R-markdown Template
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Kittipos",
+           family = "Sirivongrungson",
+           role = c("aut", "cre"),
+           email = "ki11ip0.s.a.s@gmail.com")
+Description: This package stores my R-markdown template.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

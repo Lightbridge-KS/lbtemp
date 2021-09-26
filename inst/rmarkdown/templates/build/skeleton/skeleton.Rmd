@@ -1,0 +1,101 @@
+---
+title: "Build"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("my_dev/build.Rmd")
+library(here)
+
+```
+
+
+# 1. Git & Build
+
+```{r use_git}
+usethis::use_git()
+```
+
+## Git Ignore
+
+```{r use_git_ignore}
+usethis::use_git_ignore("folder_name")
+```
+
+## Build Ignore
+
+```{r use_build_ignore}
+usethis::use_build_ignore("folder_name")
+```
+
+# 2. DOCs
+
+
+## DESCRIPTION
+
+```{r DESCRIPTION}
+usethis::use_description(
+fields = list(
+  Title = "What The Package Does (one line, title case required)",
+  `Authors@R` = 'person("Kittipos", "Sirivongrungson", 
+                        email = "ki11ip0.s.a.s@gmail.com", 
+                        role = c("aut", "cre"))',
+  Description = "What the package does (one paragraph)",
+  License = "MIT + file LICENSE"
+  )
+)
+```
+
+
+## LICENSE
+
+```{r LICENSE}
+usethis::use_mit_license()
+```
+
+## README
+
+```{r README}
+# usethis::use_readme_rmd()
+# usethis::use_lifecycle_badge("experimental")
+```
+
+
+## Template
+
+```{r}
+# usethis::use_rmarkdown_template(
+#   template_name = "name",
+#   template_description = "description"
+#   )
+```
+
+
+# 3. Dependencies
+
+## Import
+
+```{r}
+# usethis::use_pipe()
+usethis::use_package()
+```
+
+
+## Import from
+
+```{r}
+# usethis::use_import_from("rlang", ":=") # Must have if use rlang
+```
+
+## Global variables
+
+
+```{r}
+# Put this in  R/globals.R
+# utils::globalVariables(c("var1"))
+usethis::use_r("globals.R")
+```
+
+
