@@ -65,7 +65,7 @@ usethis::use_mit_license()
 
 ## Template
 
-```{r}
+```{r rmd_template}
 # usethis::use_rmarkdown_template(
 #   template_name = "name",
 #   template_description = "description"
@@ -77,7 +77,7 @@ usethis::use_mit_license()
 
 ## Import
 
-```{r}
+```{r import}
 # usethis::use_pipe()
 usethis::use_package()
 ```
@@ -85,14 +85,14 @@ usethis::use_package()
 
 ## Import from
 
-```{r}
+```{r import_from}
 # usethis::use_import_from("rlang", ":=") # Must have if use rlang
 ```
 
 ## Global variables
 
 
-```{r}
+```{r globalVariables}
 # Put this in  R/globals.R
 # utils::globalVariables(c("var1"))
 usethis::use_r("globals.R")
