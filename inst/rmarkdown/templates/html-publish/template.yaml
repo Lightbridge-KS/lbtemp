@@ -1,0 +1,4 @@
+name: html-publish
+description: >
+   My template for publish html document
+create_dir: FALSE

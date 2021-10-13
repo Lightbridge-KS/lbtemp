@@ -1,0 +1,24 @@
+---
+title: "Title"
+author: "Kittipos Sirivongrungson"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    theme: united
+    df_print: paged
+    code_folding: "show"
+    toc: TRUE
+    toc_float: TRUE
+    code_download: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("path")
+library(here)
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+
