@@ -22,6 +22,7 @@ usethis::use_git()
 
 ```{r use_git_ignore}
 usethis::use_git_ignore("folder_name")
+# usethis::use_git_ignore("testdata/") # ignore private Test Data in `inst/testdata`
 ```
 
 ## Build Ignore
@@ -98,4 +99,15 @@ usethis::use_package()
 usethis::use_r("globals.R")
 ```
 
+# 4. Tests
 
+```{r testthat}
+# usethis::use_testthat()
+```
+
+If you want to use data for testing, put data file(s) in `inst/testdata`.
+The path to this data can be obtained by `system.file("testdata",...,package="my_package")`.
+
+For example, If I put `cars.csv` in `inst/testdata`, to read into R use this command `read.csv(system.file("testdata","cars.csv", package="my_package"))`.
+
+[ref](https://stackoverflow.com/questions/32328802/where-should-i-put-data-for-automated-tests-with-testthat)
