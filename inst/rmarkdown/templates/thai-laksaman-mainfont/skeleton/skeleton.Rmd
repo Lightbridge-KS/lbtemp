@@ -10,8 +10,14 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("path")
+library(here)
+library(tidyverse)
+
+theme_set(theme_bw())
 ```
+
 
 \textthai{} 
 
@@ -30,8 +36,6 @@ knitr::opts_chunk$set(echo = TRUE)
 * ลิสต์
     + ไทย 1
     + ไทย 2
-
-
 
 
 
