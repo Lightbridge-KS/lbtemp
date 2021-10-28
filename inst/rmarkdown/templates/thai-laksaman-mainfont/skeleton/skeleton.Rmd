@@ -1,0 +1,68 @@
+---
+title: "Template Title"
+author: "กิตติพศ ศิริวงศ์รังสรร"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    includes:
+      in_header: "TeX/thai-Laksaman-mainfont.tex"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textthai{} 
+
+# เฮดดิ้ง ๑
+## เฮดดิ้ง ๒
+### เฮดดิ้ง ๓
+#### เฮดดิ้ง ๔
+\
+
+สวัสดีชาวโลก Hello World
+\
+*ตัวเอียง* หรือ **ตัวหนา** is not working.
+
+
+* unordered list
+* ลิสต์
+    + ไทย 1
+    + ไทย 2
+
+
+
+
+
+```{=latex}
+\begin{tabular}{ll}
+A & B \\
+A & B \\
+\end{tabular}
+```
+
+
+
+$$
+		f^{(n)}(z_0)=\frac{n!}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz.
+$$
+
+
+\
+
+LaTeX คือระบบจัดเตรียมเอกสารสำหรับการพิมพ์ที่มีคุณภาพสูง
+LaTeX เป็น mark-up language คล้าย ๆ กับภาษา HTML
+LaTeX ไม่ใช่ภาษาที่เป็น What-You-See-Is-What-You-Get (WYSIWYG)
+LaTeX เกิดขึ้นมาตั้งแต่ปี 1985 โดยคุณ Lesile Lamport
+ปัจจุบัน LaTeX มีการ Major change มาแล้วถึง 3 version :[latex](https://www.latex-project.org)
+
+\
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```

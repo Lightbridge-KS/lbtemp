@@ -1,0 +1,15 @@
+% Ref: https://srakrn.me/blog/thai-typesetting-with-xelatex/
+
+% ใช้ fontspec เพื่อตั้งค่าฟอนต์
+\usepackage{fontspec}
+% ใช้ polyglossia เพื่อภาษาไทย
+\usepackage{polyglossia}
+
+% ตั้งค่าฟอนต์
+\setdefaultlanguage{thai}
+% ตั้งค่าฟอนต์หลักของเอกสาร
+\setmainfont{Laksaman:script=thai}
+\newfontfamily\thaifont{Laksaman:script=thai}
+% ตั้งค่าฟอนต์แบบความกว้างคงที่ (monospace) ของเอกสาร
+% ตั้งค่าให้ตัดคำภาษาไทย
+\XeTeXlinebreaklocale "th"
