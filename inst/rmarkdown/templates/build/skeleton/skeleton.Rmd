@@ -44,7 +44,8 @@ fields = list(
                         email = "ki11ip0.s.a.s@gmail.com", 
                         role = c("aut", "cre"))',
   Description = "What the package does (one paragraph)",
-  License = "MIT + file LICENSE"
+  License = "MIT + file LICENSE",
+  Depends = "R (>= 2.10)"
   )
 )
 ```
@@ -111,3 +112,59 @@ The path to this data can be obtained by `system.file("testdata",...,package="my
 For example, If I put `cars.csv` in `inst/testdata`, to read into R use this command `read.csv(system.file("testdata","cars.csv", package="my_package"))`.
 
 [ref](https://stackoverflow.com/questions/32328802/where-should-i-put-data-for-automated-tests-with-testthat)
+
+# 5. Data
+
+## Exported Data
+
+-   Run: `usethis::use_data(export_df)`
+
+To store exported data in `data/`. 
+Each file in this directory should be `.rda` file containing a single object.
+
+-   Run: `usethis::use_data_raw("export_df")`
+
+To store code that used for data preparation in `data-raw/` 
+
+
+```{r export_data}
+# usethis::use_data(export_df1,export_df2) 
+
+# usethis::use_data_raw("export_df1") # Code to Prepare data
+# usethis::use_data_raw("export_df2") # Code to Prepare data
+```
+
+**How to Document a Data set**
+
+Document the name of the data in `R/` as roxygen2:
+
+```{r data_doc_example}
+#' Prices of 50,000 round cut diamonds.
+#'
+#' A dataset containing the prices and other attributes of almost 54,000
+#' diamonds.
+#'
+#' @format A data frame with 53940 rows and 10 variables:
+#' \describe{
+#'   \item{price}{price, in US dollars}
+#'   \item{carat}{weight of the diamond, in carats}
+#'   ...
+#' }
+#' @source \url{http://www.diamondse.info/}
+"diamonds"
+```
+
+
+
+
+## Internal Data
+
+Save all of the objects for internal use in `R/sysdata.rda.`
+Usually, they don’t need to be documented.
+
+```{r internal_data}
+# usethis::use_data(df1, df2, df3, internal = TRUE)
+```
+
+
+
