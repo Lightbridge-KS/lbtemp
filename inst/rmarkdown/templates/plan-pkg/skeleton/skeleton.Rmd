@@ -1,0 +1,34 @@
+---
+title: "Planning for ..."
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+
+Nomenclatures: DEV (for developer), USER (for user)
+
+
+## OOP
+
+**class_name**
+
+-   attributes: "attr_name" = description
+
+### Class Functions (DEV)
+
+**class_name**
+
+-   `create_*`: create "class_name" & set ... attribute
+-   `new_*`: add "class_name" class to existing ...
+-   `is_*`: check class
+
+## Plan: USER functions
+
+1.  `fun1`:
+
+2.  `fun2`:
+
+## Plan: ... functions Family
+
+1.  `fun1`:
+
+2.  `fun2`:

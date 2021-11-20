@@ -1,0 +1,4 @@
+name: Plan-PKG
+description: >
+   Planing template for R-package functions
+create_dir: FALSE
