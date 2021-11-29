@@ -1,0 +1,51 @@
+---
+title: "Package Down Site"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("my_dev/pkg-down.Rmd")
+library(here)
+```
+
+
+## Setup GitHub Pages
+
+The GitHub page will be deployed from "gh-pages" branch of the package repo.
+
+```{r use_pkgdown_github_pages}
+usethis::use_pkgdown_github_pages()
+```
+
+
+## Build Site
+
+```{r build_site}
+pkgdown::build_site()
+```
+
+After commit changes to main branch, Github action (bot) will push necessary changes to "gh-pages" branch.
+
+## Customize Pages
+
+```{r}
+rstudioapi::navigateToFile("_pkgdown.yml")
+```
+
+
+
+```{yml}
+# Template
+template:
+  params:
+    bootswatch: cosmo
+
+# Navigation Bar
+navbar:
+  right:
+   - icon: fa-github
+     href: https://github.com/Lightbridge-KS/repo
+```
+

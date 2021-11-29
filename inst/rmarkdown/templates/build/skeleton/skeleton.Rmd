@@ -106,12 +106,27 @@ usethis::use_r("globals.R")
 # usethis::use_testthat()
 ```
 
+Helper Functions for test -> create `testthat/helper.R` manually
+
+
 If you want to use data for testing, put data file(s) in `inst/testdata`.
 The path to this data can be obtained by `system.file("testdata",...,package="my_package")`.
 
 For example, If I put `cars.csv` in `inst/testdata`, to read into R use this command `read.csv(system.file("testdata","cars.csv", package="my_package"))`.
 
 [ref](https://stackoverflow.com/questions/32328802/where-should-i-put-data-for-automated-tests-with-testthat)
+
+
+**Path to testdata folder**: put this in `testthat/test-helper.R`:
+
+```{r path_testdata}
+path_testdata <- function(..., package = "pkg_name") {
+
+  system.file("testdata", ... ,package = package)
+
+}
+```
+
 
 # 5. Data
 

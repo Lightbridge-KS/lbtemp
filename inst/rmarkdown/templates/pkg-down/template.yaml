@@ -1,0 +1,4 @@
+name: PKG-Down
+description: >
+   Template for executing PKG down site for R-package
+create_dir: FALSE
