@@ -39,8 +39,8 @@ rstudioapi::navigateToFile("_pkgdown.yml")
 ```{yml}
 # Template
 template:
-  params:
-    bootswatch: cosmo
+  bootstrap: 5
+  bootswatch: flatly
 
 # Navigation Bar
 navbar:
