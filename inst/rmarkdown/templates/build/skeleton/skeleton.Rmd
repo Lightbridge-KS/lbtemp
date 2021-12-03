@@ -11,6 +11,14 @@ library(here)
 
 ```
 
+# PKG Version
+
+
+```{r}
+# increments the version field in DESCRIPTION
+# usethis::use_version("patch")
+```
+
 
 # 1. Git & Build
 
@@ -81,6 +89,7 @@ usethis::use_mit_license()
 
 ```{r import}
 # usethis::use_pipe()
+# usethis::use_tibble() # If package use `tbl_df` class
 usethis::use_package()
 ```
 
