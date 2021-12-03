@@ -115,8 +115,11 @@ usethis::use_r("globals.R")
 # usethis::use_testthat()
 ```
 
-Helper Functions for test -> create `testthat/helper.R` manually
+Helper Functions for test -> create `tests/testthat/helper.R` manually
 
+```{r}
+# fs::file_create(here("tests/testthat/helper.R"))
+```
 
 If you want to use data for testing, put data file(s) in `inst/testdata`.
 The path to this data can be obtained by `system.file("testdata",...,package="my_package")`.
