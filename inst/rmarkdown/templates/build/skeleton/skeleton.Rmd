@@ -20,7 +20,16 @@ library(here)
 ```
 
 
-# 1. Git & Build
+# 1. PKG File Structures
+
+
+```{r fs_pkg}
+fs::dir_create("my_dev") # Contain R-Markdown to develop
+# fs::dir_create("my_data") # Contain my private data
+# fs::dir_create("my_R") # Contain my personal R script file 
+```
+
+# 2. Git & Build
 
 ```{r use_git}
 usethis::use_git()
@@ -39,7 +48,7 @@ usethis::use_git_ignore("folder_name")
 usethis::use_build_ignore("folder_name")
 ```
 
-# 2. DOCs
+# 3. DOCs
 
 
 ## DESCRIPTION
@@ -83,7 +92,7 @@ usethis::use_mit_license()
 ```
 
 
-# 3. Dependencies
+# 4. Dependencies
 
 ## Import
 
@@ -109,7 +118,7 @@ usethis::use_package()
 usethis::use_r("globals.R")
 ```
 
-# 4. Tests
+# 5. Tests
 
 ```{r testthat}
 # usethis::use_testthat()
@@ -129,7 +138,7 @@ For example, If I put `cars.csv` in `inst/testdata`, to read into R use this com
 [ref](https://stackoverflow.com/questions/32328802/where-should-i-put-data-for-automated-tests-with-testthat)
 
 
-**Path to testdata folder**: put this in `testthat/test-helper.R`:
+**Path to testdata folder**: put this in `tests/testthat/helper.R`:
 
 ```{r path_testdata}
 path_testdata <- function(..., package = "pkg_name") {
@@ -140,7 +149,7 @@ path_testdata <- function(..., package = "pkg_name") {
 ```
 
 
-# 5. Data
+# 6. Data
 
 ## Exported Data
 
