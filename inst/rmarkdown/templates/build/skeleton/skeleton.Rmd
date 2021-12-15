@@ -102,7 +102,7 @@ usethis::use_mit_license()
 usethis::use_package()
 
 # Dev Package
-usethis::use_dev_package("pkg", remote = "Lightbridge-KS/pkg")
+# usethis::use_dev_package("pkg", remote = "Lightbridge-KS/pkg")
 ```
 
 
