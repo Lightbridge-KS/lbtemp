@@ -100,6 +100,9 @@ usethis::use_mit_license()
 # usethis::use_pipe()
 # usethis::use_tibble() # If package use `tbl_df` class
 usethis::use_package()
+
+# Dev Package
+usethis::use_dev_package("pkg", remote = "Lightbridge-KS/pkg")
 ```
 
 
