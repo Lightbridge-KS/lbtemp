@@ -81,6 +81,11 @@ usethis::use_mit_license()
 # usethis::use_lifecycle_badge("experimental")
 ```
 
+## Vignette
+
+```{r vignette}
+# usethis::use_vignette("pkg", "Introduction to pkg")
+```
 
 ## Template
 
@@ -120,6 +125,7 @@ usethis::use_package()
 # utils::globalVariables(c("var1"))
 usethis::use_r("globals.R")
 ```
+
 
 # 5. Tests
 
