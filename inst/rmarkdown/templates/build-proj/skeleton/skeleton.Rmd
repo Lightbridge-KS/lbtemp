@@ -16,9 +16,9 @@ library(here)
 
 
 ```{r fs_proj}
-fs::dir_create("dev") # Contain R-Markdown to develop
-# fs::dir_create("my_data") # Contain my private data
-# fs::dir_create("my_R") # Contain my personal R script file 
+fs::dir_create(here("dev")) # Contain R-Markdown to develop
+# fs::dir_create(here("my_data")) # Contain my private data
+# fs::dir_create(here("my_R")) # Contain my personal R script file 
 ```
 
 # 2. Git & Build
@@ -30,7 +30,8 @@ usethis::use_git()
 ## Git Ignore
 
 ```{r use_git_ignore}
-usethis::use_git_ignore("folder_name")
+usethis::use_git_ignore("*.nb.html") # HTML notebook
+# usethis::use_git_ignore("folder_name")
 # usethis::use_git_ignore("testdata/") # ignore private Test Data in `inst/testdata`
 ```
 
