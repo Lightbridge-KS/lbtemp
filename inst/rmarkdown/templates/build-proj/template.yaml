@@ -1,0 +1,4 @@
+name: build-proj
+description: >
+   Steps for building reproducible R-project
+create_dir: FALSE
