@@ -1,0 +1,4 @@
+name: Bookdown PDF Thai
+description: >
+   Bookdown with pandoc TeX template for Thai language (Text Only, No Plot)
+create_dir: TRUE
