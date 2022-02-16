@@ -1,11 +1,34 @@
 ---
 title: "Planning for ..."
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_notebook
+output: html_document
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("my_dev/plan.Rmd")
+library(here)
+```
 
 Nomenclatures: DEV (for developer), USER (for user)
 
+## Package Structure
+
+-   **inst/**
+
+    -   **rmarkdown/**
+
+        -   RStudio RMD Template 1
+
+    -   **templates/**
+
+        -   Template
+
+### Create Structures
+
+```{r}
+fs::file_create(here("path"))
+```
 
 ## OOP
 

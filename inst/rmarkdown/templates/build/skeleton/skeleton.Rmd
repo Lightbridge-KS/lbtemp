@@ -6,7 +6,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
-here::i_am("my_dev/build.Rmd")
+here::i_am("dev/build.Rmd")
 library(here)
 
 ```
@@ -24,7 +24,8 @@ library(here)
 
 
 ```{r fs_pkg}
-fs::dir_create("my_dev") # Contain R-Markdown to develop
+fs::dir_create("dev") # Public R-Markdown to develop
+fs::dir_create("my_dev") # Private R-Markdown to develop
 # fs::dir_create("my_data") # Contain my private data
 # fs::dir_create("my_R") # Contain my personal R script file 
 ```
@@ -39,13 +40,20 @@ usethis::use_git()
 
 ```{r use_git_ignore}
 usethis::use_git_ignore("folder_name")
+usethis::use_git_ignore("my_dev/") # Private Dev
+usethis::use_git_ignore("*.nb.html") # HTML notebook files
 # usethis::use_git_ignore("testdata/") # ignore private Test Data in `inst/testdata`
 ```
 
 ## Build Ignore
 
+R will not build theses files. If "file A" is build ignored but not git ignored, "file A" will available on github, but not in an installed binary package. Useful for tutorial
+
 ```{r use_build_ignore}
 usethis::use_build_ignore("folder_name")
+# Ignore Dev/
+usethis::use_build_ignore("dev") 
+usethis::use_build_ignore("my_dev")
 ```
 
 ## Github Links
@@ -120,7 +128,9 @@ usethis::use_mit_license()
 ```{r rmd_template}
 # usethis::use_rmarkdown_template(
 #   template_name = "name",
-#   template_description = "description"
+#   template_dir = "dir-name",
+#   template_description = "description",
+#   template_create_dir = FALSE
 #   )
 ```
 
