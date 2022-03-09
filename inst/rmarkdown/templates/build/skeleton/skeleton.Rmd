@@ -100,6 +100,13 @@ use_github_action("test-coverage")
 [Ref](https://github.com/r-lib/actions/tree/v1/examples#test-coverage-workflow)
 
 
+[Not Sure Nessesity about this] this will connect your package to codecov.
+
+```{r}
+covr::codecov(token = "your-token")
+```
+
+
 3. Package Coverage (Local)
 
 [covr](https://covr.r-lib.org)
@@ -147,6 +154,14 @@ usethis::use_mit_license()
 ```{r README}
 # usethis::use_readme_rmd()
 # usethis::use_lifecycle_badge("experimental")
+```
+
+## NEWS
+
+[NEWS](https://r-pkgs.org/release.html#news)
+
+```{r}
+# usethis::use_news_md()
 ```
 
 ## Vignette
