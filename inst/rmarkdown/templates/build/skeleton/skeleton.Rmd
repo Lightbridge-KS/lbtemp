@@ -66,7 +66,7 @@ usethis::use_github_links()
 
 
 
-## Github Action
+## R CMD Check
 
 This will 
 
@@ -82,6 +82,38 @@ usethis::use_github_actions()
 See more at: 
 -  [How to Github Action](https://orchid00.github.io/actions_sandbox/packageci.html)
 -  [Github Action WF](https://github.com/r-lib/actions/blob/v1/examples/README.md)
+
+## Test coverage workflow
+
+1. Call `usethis::use_coverage()`
+
+```{r use_coverage}
+usethis::use_coverage()
+```
+
+2. Set github action
+
+```{r test-coverage}
+use_github_action("test-coverage")
+```
+
+[Ref](https://github.com/r-lib/actions/tree/v1/examples#test-coverage-workflow)
+
+
+3. Package Coverage (Local)
+
+[covr](https://covr.r-lib.org)
+
+```{r}
+covr::package_coverage()
+```
+
+for interactive use in viewer pane
+
+```{r}
+covr::report()
+```
+
 
 
 # 3. DOCs
