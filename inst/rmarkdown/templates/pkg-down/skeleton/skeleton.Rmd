@@ -33,10 +33,26 @@ pkgdown::preview_site()
 pkgdown::build_site()
 ```
 
+### Build Home Quickly
+
+```{r}
+pkgdown::build_home_index()  
+pkgdown::init_site()
+```
+
+
 ### Build Ref 
 
 ```{r build_ref}
 pkgdown::build_reference()
+```
+
+### Build Articles
+
+renders each R Markdown file underneath `vignettes/` and saves it to `articles/`
+
+```{r}
+pkgdown::build_articles()
 ```
 
 
