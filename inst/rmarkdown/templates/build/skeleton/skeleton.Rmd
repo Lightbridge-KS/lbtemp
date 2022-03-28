@@ -100,7 +100,10 @@ use_github_action("test-coverage")
 [Ref](https://github.com/r-lib/actions/tree/v1/examples#test-coverage-workflow)
 
 
-[Not Sure Nessesity about this] this will connect your package to codecov.
+
+This will connect your package to codecov.
+
+Click on codecov badges, it will link to site, then copy token to clip board.
 
 ```{r}
 covr::codecov(token = "your-token")
